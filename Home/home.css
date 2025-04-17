@@ -174,8 +174,10 @@ transition: 300ms;
 }
 
 .hb svg{
- display: none;
+display: none;
 }
+
+
 
 .hb ul{
   display: none;
@@ -314,11 +316,5 @@ transition: 300ms;
     display: block;
   }
 
-  .hb li{
- 
- 
-    position: left;
-
-  }
   
 }
