@@ -61,6 +61,48 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 
+
+body.dark-mode {
+  background-color: #121212;
+}
+
+body.dark-mode .main {
+  background: linear-gradient(180deg, #232526 0%, #414345 100%);
+}
+
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode button,
+body.dark-mode nav ul li a {
+  color: #cdcdcd;
+}
+
+body.dark-mode .hero-content button:last-child{
+  color: #fdfdfd;
+ border: solid 0.5px white;
+}
+
+
+body.dark-mode .hero-content button:hover{
+  color: #fdfdfd;
+  border: solid 0.5px white;
+}
+
+body.dark-mode .btn2:hover{
+  color: #fdfdfd;
+  border: solid 0.5px white;
+  
+}
+
+
+body.dark-mode .btn1{
+ border: solid 0.5px white;
+}
+
+
+
+
+
 .main{
  
   background: #FFFFFF;
@@ -317,6 +359,8 @@ display: none;
  .hb img{
     display: block;
   }
+
+ 
 
   
 }

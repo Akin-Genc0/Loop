@@ -3,57 +3,20 @@ const hamburgerContainer = document.querySelector(".hb");
 const hamburgerOpenIcon = hamburgerContainer.querySelector(".hamburger");
 const hamburgerCloseIcon = hamburgerContainer.querySelector(".hamburger1");
 const navList = hamburgerContainer.querySelector("ul");
-
-// Select general DOM elements
-const mainContainer = document.querySelector(".main");
-const nav = document.querySelector("nav");
-const heroParagraph = document.querySelector("p");
-const heroHeading = document.querySelector("h1");
+const logo = document.querySelector(".icon");
 const heroContent = document.querySelector(".hero-content");
-const firstButton = document.querySelector("button");
 
-// --- Light/Dark Mode Toggle (Feature in progress) ---
 
-/*
 // Select light/dark mode toggle icons
 const themeToggle = document.querySelector(".sun");
 const sunIcon = themeToggle.querySelector(".su");
 const moonIcon = themeToggle.querySelector(".mo");
+const logod =  logo.querySelector(".darkic");
+const logol =  logo.querySelector(".ligthic");
 
-// Initial theme icon state
-moonIcon.style.display = "none";
-
-// Light mode to dark mode
-sunIcon.addEventListener("click", function (e) {
-  e.stopPropagation();
-  moonIcon.style.display = "block";
-  sunIcon.style.display = "none";
-
-  document.body.style.backgroundColor = "#121212";
-  mainContainer.style.background = 'linear-gradient(180deg, #232526 0%, #414345 100%)';
-
-  heroParagraph.style.color = "#fff";
-  heroHeading.style.color = "#fff";
-  navList.style.color = "#fff";
-  firstButton.style.color = "#fff";
-  firstButton.style.borderColor = '#fff';
-  nav.style.color = '#fff';
-});
-
-// Dark mode to light mode
-moonIcon.addEventListener("click", function (e) {
-  e.stopPropagation();
-  moonIcon.style.display = "none";
-  sunIcon.style.display = "block";
-
-  document.body.style.backgroundColor = "";
-  mainContainer.style.background = "";
-  heroParagraph.style.color = "";
-  heroHeading.style.color = "";
-  firstButton.style.color = "";
-  firstButton.style.borderColor = '';
-});
-*/
+logod.style.display = "none";
+sunIcon.style.cursor = "pointer"
+moonIcon.style.cursor = "pointer"
 
 // Initial hamburger icon state
 hamburgerCloseIcon.style.display = "none";
@@ -67,7 +30,7 @@ navList.style.opacity = "0.7";
 navList.style.lineHeight = "3";
 navList.style.padding = "1rem 1rem";
 
-// --- Hamburger Nav Toggle ---
+// Hamburger Nav Toggle 
 
 hamburgerOpenIcon.addEventListener("click", function (e) {
   e.stopPropagation();
@@ -94,8 +57,38 @@ window.addEventListener("resize", function () {
     navList.style.display = "none";
     hamburgerOpenIcon.style.display = "none";
     hamburgerCloseIcon.style.display = "none";
+    logo.style.display = "block";
   } else {
     hamburgerOpenIcon.style.display = "block";
     hamburgerCloseIcon.style.display = "none";
+    logo.style.display = "none";
   }
+});
+
+
+
+//hide them for now
+moonIcon.style.display = "none";
+hamburgerCloseIcon.style.display = "none";
+
+
+// Light mode to dark mode
+sunIcon.addEventListener("click", function (e) {
+    e.stopPropagation();
+  moonIcon.style.display = "block";
+  sunIcon.style.display = "none";
+  logod.style.display = "block"
+    logol.style.display = "none"
+  document.body.classList.add('dark-mode');
+});
+
+// Dark mode to light mode
+moonIcon.addEventListener("click", function (e) {
+    e.stopPropagation();
+  moonIcon.style.display = "none";
+  sunIcon.style.display = "block";
+   logod.style.display = "none"
+   logol.style.display = "block"
+  document.body.classList.remove('dark-mode');
+ 
 });
