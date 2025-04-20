@@ -69,6 +69,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1rem;
 
 margin: 2rem 5rem;
+
+
 }
 
 .hero{
@@ -173,7 +175,7 @@ transition: 300ms;
   transition: 400ms;
 }
 
-.hb svg{
+.hb img{
 display: none;
 }
 
@@ -312,7 +314,7 @@ display: none;
   }
   
   
- .hb svg{
+ .hb img{
     display: block;
   }
 
