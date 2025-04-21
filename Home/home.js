@@ -6,7 +6,6 @@ const navList = hamburgerContainer.querySelector("ul");
 const logo = document.querySelector(".icon");
 const heroContent = document.querySelector(".hero-content");
 
-
 // Select light/dark mode toggle icons
 const themeToggle = document.querySelector(".sun");
 const sunIcon = themeToggle.querySelector(".su");
@@ -14,14 +13,14 @@ const moonIcon = themeToggle.querySelector(".mo");
 const logod =  logo.querySelector(".darkic");
 const logol =  logo.querySelector(".ligthic");
 
+//Initial states
 logod.style.display = "none";
 sunIcon.style.cursor = "pointer"
 moonIcon.style.cursor = "pointer"
-
-// Initial hamburger icon state
 hamburgerCloseIcon.style.display = "none";
 
-// --- Mobile Nav Styling ---
+
+// Mobile Nav Styling
 navList.style.backgroundColor = "white";
 navList.style.position = "absolute";
 navList.style.left = "70%";
@@ -31,7 +30,6 @@ navList.style.lineHeight = "3";
 navList.style.padding = "1rem 1rem";
 
 // Hamburger Nav Toggle 
-
 hamburgerOpenIcon.addEventListener("click", function (e) {
   e.stopPropagation();
   hamburgerOpenIcon.style.display = "none";
@@ -39,6 +37,7 @@ hamburgerOpenIcon.addEventListener("click", function (e) {
   navList.style.display = navList.style.display === "block" ? "none" : "block";
 });
 
+//Close toggal
 hamburgerCloseIcon.addEventListener("click", function (e) {
   e.stopPropagation();
   hamburgerCloseIcon.style.display = "none";
@@ -66,7 +65,6 @@ window.addEventListener("resize", function () {
 });
 
 
-
 //hide them for now
 moonIcon.style.display = "none";
 hamburgerCloseIcon.style.display = "none";
@@ -82,7 +80,7 @@ sunIcon.addEventListener("click", function (e) {
   document.body.classList.add('dark-mode');
 });
 
-// Dark mode to light mode
+// dark mode to light mode
 moonIcon.addEventListener("click", function (e) {
     e.stopPropagation();
   moonIcon.style.display = "none";
@@ -90,5 +88,4 @@ moonIcon.addEventListener("click", function (e) {
    logod.style.display = "none"
    logol.style.display = "block"
   document.body.classList.remove('dark-mode');
- 
 });

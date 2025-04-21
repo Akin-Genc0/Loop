@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 body.dark-mode {
-  background-color: #121212;
+  background-color: #1b1b1b;
 }
 
 body.dark-mode .main {
@@ -100,7 +100,21 @@ body.dark-mode .btn1{
 }
 
 
+body.dark-mode a.box,
+body.dark-mode a.box2,
+body.dark-mode a.box3 {
+   background: linear-gradient(180deg, #2c2e31 0%, #3a3d40 100%);      
+  border: 1px solid #2a2a30;            
+                       
+}
 
+body.dark-mode .boxs h4{
+  color: #fff;
+}
+
+body.dark-mode .img-con{
+  background-color: #383839;
+}
 
 
 .main{
@@ -271,6 +285,73 @@ display: none;
   transition: 400ms;
 }
 
+
+.mid{
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+
+
+a.box, a.box2, a.box3{
+  width: 25rem;
+  background-color: #F6F6F8;
+  border-radius: 0.7rem;
+  border: solid #EDEDF0 2px;
+  padding: 1rem 1rem;
+  color: #737A85;
+  text-decoration: none;
+  margin: 0rem 1rem;
+ 
+}
+
+
+a.box:hover, a.box2:hover, a.box3:hover{
+   scale: 1.05;
+   transition: 0.3s;
+}
+
+.boxs{
+  width: 100%;
+  height: 100%;
+  border-radius: 0.7rem;
+}
+
+.boxs p{
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.boxs h4{
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #302F34;
+}
+
+.img-con{
+  width: 100%;
+  height: 14rem;
+  background-color: #F2F3F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+
+}
+
+.img-con img{
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 0.5rem;
+}
+
+
+
+
 @media (max-width: 1200px) {
   nav {
     margin: 0 3rem;
@@ -360,7 +441,9 @@ display: none;
     display: block;
   }
 
- 
+ .icon {
+  display: none;
+ }
 
   
 }
