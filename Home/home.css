@@ -445,5 +445,12 @@ a.box:hover, a.box2:hover, a.box3:hover{
   display: none;
  }
 
+ a.box, a.box2, a.box3{
+  width: 21rem;
+}
+
+.mid{
+  margin-top: 1.5rem;
+}
   
 }
