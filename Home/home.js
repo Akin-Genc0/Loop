@@ -77,6 +77,7 @@ sunIcon.addEventListener("click", function (e) {
   sunIcon.style.display = "none";
   logod.style.display = "block"
     logol.style.display = "none"
+    navList.style.backgroundColor = "#414345";
   document.body.classList.add('dark-mode');
 });
 
@@ -87,5 +88,6 @@ moonIcon.addEventListener("click", function (e) {
   sunIcon.style.display = "block";
    logod.style.display = "none"
    logol.style.display = "block"
+   navList.style.backgroundColor = "";
   document.body.classList.remove('dark-mode');
 });
