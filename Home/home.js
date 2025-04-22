@@ -70,6 +70,30 @@ moonIcon.style.display = "none";
 hamburgerCloseIcon.style.display = "none";
 
 
+//fade function
+function fade() {
+    document.body.classList.remove("fade-transition");
+    moonIcon.style.display = "block";
+    sunIcon.style.display = "none";
+    logod.style.display = "block";
+    logol.style.display = "none";
+    navList.style.backgroundColor = "#414345";
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("theme", "dark-mode");   
+}
+
+//fade to ligth
+function fadeLigth() {
+    document.body.classList.remove("fade-transition");
+    moonIcon.style.display = "none";
+    sunIcon.style.display = "block";
+    logod.style.display = "none";
+    logol.style.display = "block";
+    navList.style.backgroundColor = "";
+    document.body.classList.remove("dark-mode");
+    localStorage.removeItem("theme");
+}
+
 
 // Apply saved theme on page load
 if (localStorage.getItem("theme") === "dark-mode") {
@@ -79,29 +103,21 @@ if (localStorage.getItem("theme") === "dark-mode") {
     logod.style.display = "block";
     logol.style.display = "none";
     navList.style.backgroundColor = "#414345";
+    
   }
   
   // Light mode to dark mode
   sunIcon.addEventListener("click", function (e) {
     e.stopPropagation();
-    moonIcon.style.display = "block";
-    sunIcon.style.display = "none";
-    logod.style.display = "block";
-    logol.style.display = "none";
-    navList.style.backgroundColor = "#414345";
-    document.body.classList.add("dark-mode");
-    localStorage.setItem("theme", "dark-mode");
+    document.body.classList.add("fade-transition")
+    setTimeout(fade, 300);
+
   });
   
   // Dark mode to light mode
   moonIcon.addEventListener("click", function (e) {
     e.stopPropagation();
-    moonIcon.style.display = "none";
-    sunIcon.style.display = "block";
-    logod.style.display = "none";
-    logol.style.display = "block";
-    navList.style.backgroundColor = "";
-    document.body.classList.remove("dark-mode");
-    localStorage.removeItem("theme");
+    document.body.classList.add("fade-transition")
+    setTimeout(fadeLigth, 300);
   });
   

@@ -62,6 +62,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+body.fade-transition {
+  transition: opacity 0.8s ease;
+  opacity: 0;
+}
+
 body.dark-mode {
   background-color: #1b1b1b;
 }
