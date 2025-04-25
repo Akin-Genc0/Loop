@@ -60,7 +60,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   
 }
-
+body {
+  padding: 0 1rem; 
+}
 
 
 body.fade-transition {
@@ -80,6 +82,21 @@ body.dark-mode .main {
   background: linear-gradient(180deg, #232526 0%, #414345 100%);
 }
 
+
+
+
+body.dark-mode .cards{
+
+ 
+  background: linear-gradient(180deg, #232526 0%, #414345 100%);
+ 
+  border: solid 2px #3b3b3b;
+
+}
+
+
+
+body.dark-mode h3,
 body.dark-mode p,
 body.dark-mode h1,
 body.dark-mode button,
@@ -114,7 +131,7 @@ body.dark-mode a.box,
 body.dark-mode a.box2,
 body.dark-mode a.box3 {
    background: linear-gradient(180deg, #2c2e31 0%, #3a3d40 100%);      
-  border: 1px solid #2a2a30;            
+  border: 1px solid #3b3b3b;            
                        
 }
 
@@ -307,7 +324,7 @@ display: none;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 5rem;
+  margin-top: 8rem;
   flex-wrap: wrap;
 }
 
@@ -366,6 +383,43 @@ a.box:hover, a.box2:hover, a.box3:hover{
   border-radius: 0.5rem;
 }
 
+.info1{
+  margin: 12rem 7rem;
+  
+}
+
+.heading p{
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+  font-size: 0.9rem;
+}
+
+.info1 h1{
+font-weight: 500;
+font-size: 2rem; 
+}
+
+.cards{
+  margin-bottom: 3rem;
+  display: flex;
+  padding: 2.6rem 4rem;
+  background: #F6F6F8;
+  border-radius: 1rem;
+  border: solid #EDEDF0 2px;
+}
+
+.cards p{
+   font-size: 1rem;
+   line-height: 2;
+   color: #3D403F;
+}
+
+.cards h3{
+  font-size: 2rem;
+  width: 35ch;
+  font-weight: 600;
+ color: #332E30;
+}
 
 
 
@@ -400,7 +454,11 @@ a.box:hover, a.box2:hover, a.box3:hover{
   nav ul {
     display: none;
   }
-
+  .cards{
+    flex-wrap: wrap;
+    padding: 3rem 3rem;
+   text-align: center;
+  }
   nav {
     margin: 0 1.5rem;
   }
@@ -430,7 +488,7 @@ a.box:hover, a.box2:hover, a.box3:hover{
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .main {
     margin: 2rem 1rem;
   }
@@ -469,5 +527,41 @@ a.box:hover, a.box2:hover, a.box3:hover{
 .mid{
   margin-top: 1.5rem;
 }
+
+.info1{
+  margin: 9rem 3.5rem;
+}
+
+.cards{
+  flex-wrap: wrap;
+  padding: 3rem 3rem;
+ text-align: center;
+}
   
+.cards p{
+margin-top: 1rem;
+
+}
+}
+
+
+@media (min-width: 1550px) {
+  .hero-content {
+    max-width: 1000px;
+    padding: 8rem 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    padding: 0 6rem;
+  }
+
+  .hero-content button {
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
+  }
 }
